@@ -1,0 +1,175 @@
+/* ============================================================
+   EstilosMundo.css - UNIFICADO Y CORREGIDO
+   Proyecto: FromInside - The Hollow Eucharist
+   Basado en la estética de la imagen de referencia
+   ============================================================ */
+
+/* --- VARIABLES DE COLOR (Colores de Marca Mejorados) --- */
+:root {
+    --morado-header: #1b1429;      /* Morado profundo del header de referencia */
+    --dorado-medieval: #b19a7a;    /* Dorado suave para textos/acentos */
+    --pergamino-claro: #dccbb5;    /* Fondo tipo papel antiguo para rellenar */
+    --crema-suave: #fdf6e3;        /* Fondo crema de la sección Mundo */
+    --texto-negro: #1a1a1a;
+    --blanco: #ffffff;
+}
+
+/* --- RESET GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Crimson Text', serif, Arial; /* Tipografía medieval */
+    background-color: var(--pergamino-claro); /* CAMBIO: Fondo claro en vez de negro */
+    color: var(--texto-negro);
+    line-height: 1.6;
+}
+
+/* --- HEADER (Corregido: Logo a la izquierda) --- */
+header {
+    background-color: var(--morado-header);
+    padding: 10px 5%; /* Padding lateral para mover el logo */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Empuja logo a izq y nav a der */
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo img { 
+    height: 60px; /* Ajusta según el tamaño de tu logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--pergamino-claro);
+}
+
+/* ============================================================
+   CARRUSEL (Corregido: Sin contorno superior)
+   ============================================================ */
+.carrusel-container {
+    position: relative;
+    width: 100%;
+    height: 480px; /* Altura fija según tu diseño */
+    overflow: hidden;
+    background: #000; /* Fondo negro para rellenar si la imagen es estrecha */
+}
+
+/* El carrusel no tenía borde en tu CSS, solo el header.
+   Al unificar el header arriba, ese borde ya no existe. */
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active { opacity: 1; }
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Llenar todo el espacio */
+}
+
+.indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.bar {
+    width: 45px;
+    height: 3px;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+}
+
+.bar.active { background: #fff; }
+
+/* ============================================================
+   SECCIÓN NACIMIENTO (Look de tu referencia crema)
+   ============================================================ */
+.nacimiento-seccion {
+    /* CAMBIO: Usamos el fondo crema suave de la imagen de referencia */
+    background-color: var(--crema-suave); 
+    color: var(--texto-negro);
+    padding: 80px 10%; /* Espaciado generoso */
+}
+
+.grid-nacimiento {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 60px; /* Separación amplia */
+    align-items: center; /* CLAVE: Centra verticalmente la foto y el texto */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nacimiento-img {
+    text-align: center; /* Asegura que la imagen esté centrada si no llena el 1fr */
+}
+
+.nacimiento-img img {
+    width: 100%; /* La imagen llenará su columna */
+    /* CAMBIO: Se eliminan bordes gruesos y contornos */
+    border: none; 
+    border-radius: 4px; /* Bordes suavizados opcionales */
+    /* Sombra muy sutil para dar relieve sin ser negro sólido */
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.05); 
+}
+
+.nacimiento-texto {
+    /* Eliminamos estilos de borde que tenías antes */
+    border-left: none; 
+}
+
+.nacimiento-texto h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: var(--texto-negro); /* Texto oscuro como en tu referencia */
+}
+
+.nacimiento-texto p {
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+/* --- FOOTER (Morado, claro y limpio) --- */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--morado-header);
+    color: #fff;
+    /* Un pequeño borde sutil arriba para separación */
+    border-top: 1px solid rgba(255,255,255,0.1); 
+}

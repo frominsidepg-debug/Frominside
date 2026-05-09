@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo | FromInside</title>
+    <link rel="stylesheet" href="css/EstilosMundo.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XK30VXFPJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4XK30VXFPJ');
+</script>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo FromInside">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Mundo.html">Mundo</a></li>
+                    <li><a href="index.html">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="carrusel-container">
+        <div class="slider">
+            <div class="slide active">
+                <img src="img/reyno pocho.png" alt="Reyno de Dnerock">
+            </div>
+            <div class="slide">
+                <img src="img/Reyno caido.jpg" alt="Paisaje Medieval">
+            </div>
+            <div class="slide">
+                <img src="img/Catacumbas.jpg" alt="Exploración">
+            </div>
+        </div>
+        <div class="indicadores">
+            <span class="bar active" onclick="currentSlide(0)"></span>
+            <span class="bar" onclick="currentSlide(1)"></span>
+            <span class="bar" onclick="currentSlide(2)"></span>
+        </div>
+    </section>
+
+    <section class="nacimiento-seccion">
+        <div class="grid-nacimiento">
+            <div class="nacimiento-img">
+                <img src="img/Anor londo.jpg" alt="Nacimiento del Mundo">
+            </div>
+            <div class="nacimiento-texto">
+                <h2>Nacimiento del mundo</h2>
+                <p>
+                    El mundo nace por el hecho de querer trasmitir enseñanzas con un juego atractivo y divertido, 
+                    por lo cual nació la idea de hacer un juego medieval de rol, en donde entraremos al reyno 
+                    de Dnerock, que fue asediado por la maldad de un dios que bajó por goce propio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 FromInside - The Hollow Eucharist</p>
+    </footer>
+
+    <script src="scriptMundos.js"></script>
+</body>
+</html>
