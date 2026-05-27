@@ -1,0 +1,278 @@
+:root {
+    --morado-header: #1b1429;
+    --dorado-medieval: #b19a7a;
+    --pergamino-claro: #dccbb5;
+    --crema-suave: #fdf6e3;
+    --texto-negro: #1a1a1a;
+    --blanco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--pergamino-claro);
+    color: var(--texto-negro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--morado-header);
+    padding: 8px 2%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--dorado-medieval);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 90px;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--dorado-medieval);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    padding-bottom: 8px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--crema-suave);
+    transform: scale(1.05);
+}
+
+nav a.activo::after,
+nav a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--dorado-medieval);
+}
+
+.cuenta-main {
+    min-height: 820px;
+    background:
+        linear-gradient(rgba(27, 20, 41, 0.78), rgba(27, 20, 41, 0.88)),
+        url("../img/Rey2.png");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 6%;
+}
+
+.cuenta-section {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cuenta-info {
+    text-align: center;
+    background: rgba(253, 246, 227, 0.92);
+    border: 12px solid rgba(177, 154, 122, 0.75);
+    padding: 45px;
+    margin-bottom: 45px;
+}
+
+.cuenta-info h1 {
+    font-size: 4rem;
+    color: var(--morado-header);
+    margin-bottom: 20px;
+}
+
+.cuenta-info p {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.cuenta-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
+}
+
+.formulario-cuenta {
+    background: rgba(253, 246, 227, 0.94);
+    border: 12px solid rgba(177, 154, 122, 0.75);
+    padding: 40px;
+}
+
+.formulario-cuenta h2 {
+    font-size: 2.8rem;
+    color: var(--morado-header);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.formulario-cuenta input {
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    padding: 16px;
+    margin-bottom: 18px;
+    border: 2px solid transparent;
+    outline: none;
+    background-color: var(--blanco);
+    color: var(--texto-negro);
+}
+
+.formulario-cuenta input:focus {
+    border-color: var(--dorado-medieval);
+}
+
+.formulario-cuenta button {
+    width: 100%;
+    background-color: var(--morado-header);
+    color: var(--crema-suave);
+    border: 2px solid var(--dorado-medieval);
+    padding: 14px 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.formulario-cuenta button:hover {
+    background-color: var(--dorado-medieval);
+    color: var(--morado-header);
+    transform: scale(1.03);
+}
+
+#mensajeCuenta {
+    text-align: center;
+    margin-top: 28px;
+    font-size: 1.3rem;
+    color: var(--crema-suave);
+}
+
+footer {
+    background-color: var(--morado-header);
+    color: var(--crema-suave);
+    border-top: 2px solid var(--dorado-medieval);
+    padding: 45px 6%;
+}
+
+.footer-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 130px;
+    margin-bottom: 12px;
+}
+
+.footer-redes h3 {
+    font-size: 2rem;
+    color: var(--dorado-medieval);
+    margin-bottom: 16px;
+}
+
+.iconos-redes {
+    display: flex;
+    gap: 18px;
+}
+
+.iconos-redes img {
+    width: 48px;
+    transition: 0.3s ease;
+}
+
+.iconos-redes img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+@media (max-width: 900px) {
+    .cuenta-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 35px;
+    }
+
+    .cuenta-info h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .cuenta-main {
+        padding: 45px 4%;
+    }
+
+    .cuenta-info,
+    .formulario-cuenta {
+        padding: 28px;
+    }
+
+    .cuenta-info h1 {
+        font-size: 2.4rem;
+    }
+
+    .formulario-cuenta h2 {
+        font-size: 2.1rem;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .iconos-redes {
+        justify-content: center;
+    }
+}
