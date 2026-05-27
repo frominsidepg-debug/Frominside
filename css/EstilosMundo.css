@@ -1,20 +1,12 @@
-/* ============================================================
-   EstilosMundo.css - UNIFICADO Y CORREGIDO
-   Proyecto: FromInside - The Hollow Eucharist
-   Basado en la estética de la imagen de referencia
-   ============================================================ */
-
-/* --- VARIABLES DE COLOR (Colores de Marca Mejorados) --- */
 :root {
-    --morado-header: #1b1429;      /* Morado profundo del header de referencia */
-    --dorado-medieval: #b19a7a;    /* Dorado suave para textos/acentos */
-    --pergamino-claro: #dccbb5;    /* Fondo tipo papel antiguo para rellenar */
-    --crema-suave: #fdf6e3;        /* Fondo crema de la sección Mundo */
+    --morado-header: #1b1429;
+    --dorado-medieval: #b19a7a;
+    --pergamino-claro: #dccbb5;
+    --crema-suave: #fdf6e3;
     --texto-negro: #1a1a1a;
     --blanco: #ffffff;
 }
 
-/* --- RESET GENERAL --- */
 * {
     margin: 0;
     padding: 0;
@@ -22,154 +14,571 @@
 }
 
 body {
-    font-family: 'Crimson Text', serif, Arial; /* Tipografía medieval */
-    background-color: var(--pergamino-claro); /* CAMBIO: Fondo claro en vez de negro */
+    font-family: 'Crimson Text', serif, Arial;
+    background-color: var(--pergamino-claro);
     color: var(--texto-negro);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* --- HEADER (Corregido: Logo a la izquierda) --- */
+
+
 header {
     background-color: var(--morado-header);
-    padding: 10px 5%; /* Padding lateral para mover el logo */
+    padding: 8px 2%;
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 2px solid var(--dorado-medieval);
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* Empuja logo a izq y nav a der */
     align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.logo img { 
-    height: 60px; /* Ajusta según el tamaño de tu logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 90px;
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--dorado-medieval);
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 1px;
+    padding-bottom: 8px;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--pergamino-claro);
+    color: var(--crema-suave);
+    transform: scale(1.05);
 }
 
-/* ============================================================
-   CARRUSEL (Corregido: Sin contorno superior)
-   ============================================================ */
-.carrusel-container {
+nav a.activo::after,
+nav a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--dorado-medieval);
+}
+
+
+
+.hero-mundo {
     position: relative;
     width: 100%;
-    height: 480px; /* Altura fija según tu diseño */
-    overflow: hidden;
-    background: #000; /* Fondo negro para rellenar si la imagen es estrecha */
-}
-
-/* El carrusel no tenía borde en tu CSS, solo el header.
-   Al unificar el header arriba, ese borde ya no existe. */
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.slide.active { opacity: 1; }
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Llenar todo el espacio */
-}
-
-.indicadores {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    min-height: 720px;
+    background-image: url("../img/Rey2.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.bar {
-    width: 45px;
-    height: 3px;
-    background: rgba(255,255,255,0.3);
-    cursor: pointer;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(10, 10, 15, 0.72), rgba(10, 10, 15, 0.82));
+    z-index: 1;
 }
 
-.bar.active { background: #fff; }
-
-/* ============================================================
-   SECCIÓN NACIMIENTO (Look de tu referencia crema)
-   ============================================================ */
-.nacimiento-seccion {
-    /* CAMBIO: Usamos el fondo crema suave de la imagen de referencia */
-    background-color: var(--crema-suave); 
-    color: var(--texto-negro);
-    padding: 80px 10%; /* Espaciado generoso */
+.hero-contenido {
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
+    text-align: center;
+    padding: 40px;
+    color: var(--crema-suave);
 }
 
-.grid-nacimiento {
+.hero-contenido h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 4.2rem;
+    color: var(--dorado-medieval);
+    margin-bottom: 24px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.8);
+}
+
+.hero-contenido p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.9;
+    margin-bottom: 18px;
+    text-shadow: 0 3px 8px rgba(0,0,0,0.8);
+}
+
+.frase-hero {
+    color: var(--dorado-medieval);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+.personaje-section {
+    background-color: var(--crema-suave);
+    padding: 45px 3%;
+}
+
+.personaje-destacado {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    gap: 60px; /* Separación amplia */
-    align-items: center; /* CLAVE: Centra verticalmente la foto y el texto */
-    max-width: 1200px;
+    grid-template-columns: minmax(520px, 35%) 1fr;
+    gap: 35px;
+    align-items: center;
+    width: 100%;
+    max-width: 2350px;
+    margin: 0 auto;
+    background: rgba(27, 20, 41, 0.80);
+    border: 16px solid rgba(177, 154, 122, 0.70);
+    border-radius: 6px;
+    padding: 34px;
+}
+
+.personaje-destacado + .personaje-destacado {
+    margin-top: 55px;
+}
+
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: clamp(620px, 43vw, 820px);
+    overflow: hidden;
+    background: var(--crema-suave);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/fondop.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+}
+
+.personaje-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12px;
+    transition: transform 0.4s ease;
+    filter:
+        contrast(1.35)
+        brightness(0.92)
+        drop-shadow(0 0 1px rgba(0,0,0,0.35));
+}
+
+.parallax-container:hover .personaje-img {
+    transform: scale(1.05);
+}
+
+.parallax-container:hover .parallax-bg {
+    transform: scale(1.08);
+}
+
+.personaje-info {
+    width: 100%;
+    min-height: clamp(620px, 43vw, 820px);
+    background: rgba(253, 246, 227, 0.92);
+    color: var(--texto-negro);
+    padding: 42px 85px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.personaje-info h2 {
+    color: var(--texto-negro);
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.personaje-info p {
+    color: var(--texto-negro);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.85;
+    margin-bottom: 22px;
+}
+
+
+.comentarios-section {
+    background-color: var(--crema-suave);
+    padding: 55px 5%;
+}
+
+.comentarios-contenedor {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    gap: 55px;
+    align-items: center;
+    background-color: var(--pergamino-claro);
+    border: 12px solid rgba(177, 154, 122, 0.75);
+    padding: 38px;
+}
+
+.comentarios-formulario h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 22px;
+    color: var(--texto-negro);
+}
+
+.comentarios-formulario input,
+.comentarios-formulario textarea {
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    padding: 16px;
+    margin-bottom: 18px;
+    border: 2px solid transparent;
+    outline: none;
+    background-color: var(--blanco);
+    color: var(--texto-negro);
+}
+
+.comentarios-formulario textarea {
+    min-height: 250px;
+    resize: vertical;
+}
+
+.comentarios-formulario input:focus,
+.comentarios-formulario textarea:focus {
+    border-color: var(--dorado-medieval);
+}
+
+.comentarios-formulario button {
+    background-color: var(--morado-header);
+    color: var(--crema-suave);
+    border: 2px solid var(--dorado-medieval);
+    padding: 12px 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.comentarios-formulario button:hover {
+    background-color: var(--dorado-medieval);
+    color: var(--morado-header);
+    transform: scale(1.05);
+}
+
+.comentarios-imagen img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    display: block;
+}
+
+
+footer {
+    background-color: var(--morado-header);
+    color: var(--crema-suave);
+    border-top: 2px solid var(--dorado-medieval);
+    padding: 45px 6%;
+}
+
+.footer-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
-.nacimiento-img {
-    text-align: center; /* Asegura que la imagen esté centrada si no llena el 1fr */
+.footer-logo img {
+    width: 130px;
+    margin-bottom: 12px;
 }
 
-.nacimiento-img img {
-    width: 100%; /* La imagen llenará su columna */
-    /* CAMBIO: Se eliminan bordes gruesos y contornos */
-    border: none; 
-    border-radius: 4px; /* Bordes suavizados opcionales */
-    /* Sombra muy sutil para dar relieve sin ser negro sólido */
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.05); 
+.footer-logo p {
+    font-family: 'Oswald', sans-serif;
 }
 
-.nacimiento-texto {
-    /* Eliminamos estilos de borde que tenías antes */
-    border-left: none; 
+.footer-redes h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: var(--dorado-medieval);
+    margin-bottom: 16px;
 }
 
-.nacimiento-texto h2 {
-    font-size: 2.8rem;
-    margin-bottom: 25px;
-    color: var(--texto-negro); /* Texto oscuro como en tu referencia */
+.iconos-redes {
+    display: flex;
+    gap: 18px;
 }
 
-.nacimiento-texto p {
-    line-height: 1.8;
-    font-size: 1.2rem;
+.iconos-redes img {
+    width: 48px;
+    transition: 0.3s ease;
 }
 
-/* --- FOOTER (Morado, claro y limpio) --- */
-footer {
-    text-align: center;
-    padding: 30px;
-    background-color: var(--morado-header);
-    color: #fff;
-    /* Un pequeño borde sutil arriba para separación */
-    border-top: 1px solid rgba(255,255,255,0.1); 
+.iconos-redes img:hover {
+    transform: scale(1.1);
+}
+
+.cookie-banner {
+
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    max-width: 900px;
+
+    background: rgba(27, 20, 41, 0.95);
+    border: 3px solid var(--dorado-medieval);
+
+    padding: 22px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    z-index: 9999;
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+}
+
+.cookie-banner p {
+
+    color: var(--crema-suave);
+    font-size: 1rem;
+}
+
+.cookie-banner button {
+
+    background-color: var(--dorado-medieval);
+    color: var(--morado-header);
+
+    border: none;
+
+    padding: 12px 24px;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.cookie-banner button:hover {
+
+    transform: scale(1.05);
+
+    background-color: var(--crema-suave);
+}
+
+@media (max-width: 700px) {
+
+    .cookie-banner {
+
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 1800px) {
+    .personaje-destacado {
+        grid-template-columns: minmax(470px, 35%) 1fr;
+    }
+
+    .personaje-info h2 {
+        font-size: 3.5rem;
+    }
+
+    .personaje-info p {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 1500px) {
+    .personaje-destacado {
+        grid-template-columns: 1fr;
+    }
+
+    .parallax-container {
+        height: 720px;
+    }
+
+    .personaje-info {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    nav ul {
+        gap: 35px;
+    }
+
+    .hero-mundo {
+        min-height: 620px;
+        background-attachment: scroll;
+    }
+
+    .hero-contenido h1 {
+        font-size: 3.2rem;
+    }
+
+    .hero-contenido p {
+        font-size: 1.1rem;
+    }
+
+    .personaje-section {
+        padding: 35px 4%;
+    }
+
+    .personaje-info {
+        padding: 38px 45px;
+    }
+
+    .personaje-info h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .personaje-info p {
+        font-size: 1.08rem;
+        line-height: 1.75;
+    }
+
+    .comentarios-contenedor {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-container {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .hero-mundo {
+        min-height: 520px;
+    }
+
+    .hero-contenido {
+        padding: 25px;
+    }
+
+    .hero-contenido h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-contenido p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .personaje-section {
+        padding: 25px 4%;
+    }
+
+    .personaje-destacado {
+        padding: 18px;
+        border-width: 12px;
+    }
+
+    .parallax-container {
+        height: 460px;
+    }
+
+    .personaje-info {
+        padding: 28px;
+    }
+
+    .personaje-info h2 {
+        font-size: 2.3rem;
+    }
+
+    .personaje-info p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .comentarios-section {
+        padding: 35px 4%;
+    }
+
+    .comentarios-contenedor {
+        padding: 24px;
+        gap: 28px;
+    }
+
+    .comentarios-formulario h2 {
+        font-size: 2rem;
+    }
+
+    .comentarios-formulario input,
+    .comentarios-formulario textarea {
+        font-size: 1rem;
+    }
+
+    .comentarios-formulario textarea {
+        min-height: 190px;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .iconos-redes {
+        justify-content: center;
+    }
 }
