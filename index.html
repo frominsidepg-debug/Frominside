@@ -1,77 +1,567 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo | FromInside</title>
-    <link rel="stylesheet" href="css/EstilosMundo.css">
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4XK30VXFPJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4XK30VXFPJ');
-</script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/EstilosMundo.css">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XK30VXFPJ"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-4XK30VXFPJ');
+    </script>
+</head>
+
 <body>
 
     <header>
         <div class="header-container">
+
             <div class="logo">
                 <img src="img/logo.png" alt="Logo FromInside">
             </div>
+
             <nav>
                 <ul>
-                    <li><a href="index.html">Mundo</a></li>
-                    <li><a href="Mundo.html">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                   
+                    <li><a class="activo" href="Index.html">Mundo</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="Cuenta.html">Cuenta</a></li>
+
                 </ul>
             </nav>
+
         </div>
     </header>
 
-    <section class="carrusel-container">
-        <div class="slider">
-            <div class="slide active">
-                <img src="img/reyno pocho.png" alt="Reyno de Dnerock">
-            </div>
-            <div class="slide">
-                <img src="img/Reyno caido.jpg" alt="Paisaje Medieval">
-            </div>
-            <div class="slide">
-                <img src="img/Catacumbas.jpg" alt="Exploración">
-            </div>
+
+    <section class="hero-mundo">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-contenido">
+
+            <h1>El Reino Caído por la Gracia</h1>
+
+            <p>
+                Florentia alguna vez fue conocida como un reino lleno de fe,
+                prosperidad y tranquilidad, donde sus habitantes vivían creyendo
+                que la gracia divina jamás los abandonaría. Sin embargo,
+                todo cambió el día en que una extraña presencia descendió desde los cielos,
+                alterando el destino de toda la humanidad.
+            </p>
+
+            <p>
+                Lo que parecía ser una salvación terminó convirtiéndose en el inicio
+                de una catástrofe imposible de detener. Una misteriosa corrupción comenzó
+                a extenderse por las tierras del reino, deformando criaturas,
+                consumiendo ciudades enteras y destruyendo lentamente todo aquello
+                que alguna vez simbolizó esperanza.
+            </p>
+
+            <p>
+                Ahora, entre ruinas olvidadas, templos vacíos y bosques consumidos
+                por la decadencia, los sobrevivientes luchan por mantenerse con vida
+                mientras Florentia se acerca cada vez más a su inevitable final.
+            </p>
+
+            <p class="frase-hero">
+                - The Hollow Eucharist
+            </p>
+
         </div>
-        <div class="indicadores">
-            <span class="bar active" onclick="currentSlide(0)"></span>
-            <span class="bar" onclick="currentSlide(1)"></span>
-            <span class="bar" onclick="currentSlide(2)"></span>
-        </div>
+
     </section>
 
-    <section class="nacimiento-seccion">
-        <div class="grid-nacimiento">
-            <div class="nacimiento-img">
-                <img src="img/Anor londo.jpg" alt="Nacimiento del Mundo">
+
+
+    <section class="personaje-section">
+
+
+
+        <div class="personaje-destacado">
+
+            <div class="parallax-container">
+                <div class="parallax-bg"></div>
+
+                <img src="img/Rye Wildgoose.jpeg" alt="Rye Wildgoose" class="personaje-img">
             </div>
-            <div class="nacimiento-texto">
-                <h2>Nacimiento del mundo</h2>
+
+            <div class="personaje-info">
+
+                <h2>Rye Wildgoose</h2>
+
                 <p>
-                    El mundo nace por el hecho de querer trasmitir enseñanzas con un juego atractivo y divertido, 
-                    por lo cual nació la idea de hacer un juego medieval de rol, en donde entraremos al reyno 
-                    de Dnerock, que fue asediado por la maldad de un dios que bajó por goce propio.
+                    Rye Wildgoose fue alguna vez un niño soñador, lleno de ilusiones y con el anhelo de convertirse
+                    algún día en un gran pianista. Sin embargo, ese sueño parecía imposible desde el momento en que
+                    nació dentro de una prestigiosa familia noble de caballeros, donde el honor, la guerra y el deber
+                    estaban por encima de cualquier aspiración artística.
+                </p>
+
+                <p>
+                    Desde muy pequeño, Rye vivió bajo las estrictas expectativas de su familia, especialmente las de
+                    su padre, un hombre severo que veía la música y los sueños de Rye como una vergüenza para el linaje
+                    Wildgoose. Mientras más intentaba alejarse del camino de la espada, más violentos y brutales se
+                    volvían los castigos dentro de su hogar.
+                </p>
+
+                <p>
+                    Su deseo de seguir un camino distinto provocó constantes conflictos con su padre, hasta que, en un
+                    momento de desesperación y miedo, Rye intentó defenderse. Aquella noche terminó en tragedia:
+                    cometió parricidio.
+                </p>
+
+                <p>
+                    Tras la muerte de su padre, Rye fue capturado y llevado ante la Iglesia por asesinar a un noble de
+                    gran influencia afiliado al poder religioso. Como castigo, fue condenado a convertirse en un
+                    Herrante,
+                    una terrible maldición impuesta sobre criminales y condenados.
+                </p>
+
+                <p>
+                    Los Herrantes son soldados inmortales obligados a regresar de la muerte una y otra vez para servir
+                    como herramientas de guerra. Sin embargo, cada resurrección consume lentamente sus recuerdos,
+                    emociones y humanidad, reduciendo poco a poco a quienes portan la maldición a simples armas vacías.
+                </p>
+
+                <p>
+                    Después de sobrevivir durante tres años como Herrante, Rye fue enviado al reino de Florentia junto a
+                    otros guerreros para investigar la desaparición de múltiples expediciones enviadas a regiones
+                    lejanas.
+                    Allí comenzará un viaje que cambiará por completo su destino y lo llevará a reencontrarse con una
+                    vieja amiga de su pasado.
                 </p>
             </div>
+
+        </div>
+
+
+
+        <div class="personaje-destacado">
+
+            <div class="parallax-container">
+                <div class="parallax-bg"></div>
+
+                <img src="img/Reymundo.jpg" alt="Reymundo de EverGreen" class="personaje-img">
+            </div>
+
+            <div class="personaje-info">
+
+                <h2>Reymundo de EverGreen</h2>
+
+
+                <p>
+                    Reymundo de EverGreen, conocido en todos los reinos como el Héroe del Amor, fue alguna vez un
+                    humilde
+                    joven con el firme deseo de proteger y ayudar a los más necesitados.
+                </p>
+
+                <p>
+                    Desde niño, él y su hermano Albert EverGreen soñaban con convertirse en los más grandes
+                    caballeros
+                    de Florentia, inspirados por las leyendas y héroes que mantenían la paz en el mundo. A pesar de
+                    las
+                    dificultades, ambos entrenaron sin descanso durante años, fortaleciendo no solo sus cuerpos y
+                    habilidades,
+                    sino también el profundo vínculo fraternal que compartían.
+                </p>
+
+                <p>
+                    Durante su crecimiento, llegaron a conocer y combatir junto a figuras legendarias como Raiden,
+                    el hechicero más poderoso del reino, y Eleaneore, la temida Duquesa de la Sangre. Sus hazañas y
+                    victorias comenzaron a extenderse por todos los territorios conocidos.
+                </p>
+
+                <p>
+                    Gracias a su valentía, nobleza y extraordinaria fuerza, Reymundo y Albert lograron ascender
+                    hasta
+                    convertirse en dos de los legendarios 15 Héroes de la Armonía, guerreros elegidos para preservar
+                    el equilibrio y la paz entre los reinos.
+                </p>
+
+                <p>
+                    La destreza de Reymundo en combate, su espíritu inquebrantable y la calidez con la que protegía
+                    a
+                    los demás hicieron que fuera considerado uno de los hombres más fuertes y admirados no solo de
+                    Florentia, sino de todos los reinos conocidos.
+                </p>
+
+                <p>
+                    Durante años, los Héroes de la Armonía mantuvieron la estabilidad del mundo… hasta el fatídico
+                    día
+                    en que el cielo se abrió. Aquella noche, un ser diabólico descendió desde las alturas acompañado
+                    por
+                    una presencia que muchos describieron como la encarnación misma del mal, marcando el inicio de
+                    una
+                    tragedia que cambiaría para siempre el destino del mundo.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="personaje-destacado">
+
+            <div class="parallax-container">
+                <div class="parallax-bg"></div>
+
+                <img src="img/Raiden.jpg" alt="Raiden Stormbreaker" class="personaje-img">
+            </div>
+
+            <div class="personaje-info">
+
+                <h2>Raiden Stormbreaker</h2>
+
+                <p>
+                    Raiden Stormbreaker fue un prodigioso hechicero reconocido desde niño por su enorme talento.
+                    Frío y distante durante gran parte de su vida, todo cambió cuando conoció a Astrid Sinclair,
+                    la mujer que le enseñó a apreciar la vida y el verdadero valor del conocimiento.
+                </p>
+
+                <p>
+                    En su juventud mantuvo una intensa rivalidad con Reymundo de EverGreen, buscando demostrar
+                    que era superior a él. Con el tiempo, ambos terminaron convirtiéndose en grandes amigos.
+                </p>
+
+                <p>
+                    La tranquilidad de Raiden terminó cuando una extraña enfermedad consumió su pueblo y acabó
+                    con la vida de Astrid. Desesperado, estuvo a punto de convertirse en un hechicero oscuro
+                    para intentar revivirla.
+                </p>
+
+                <p>
+                    Sin embargo, fue detenido por Reymundo, quien le recordó que debía honrarla haciendo lo correcto.
+                    Desde entonces, Raiden dedicó todo su conocimiento a la medicina y la alquimia, logrando crear
+                    una cura que salvó miles de vidas.
+                </p>
+
+                <p>
+                    Años después, cuando el ser diabólico descendió del cielo y desató su maldición sobre el mundo,
+                    Raiden fue infectado por aquella oscuridad. Antes de desaparecer por completo, ayudó a Reymundo
+                    a realizar un pacto con un demonio para proteger a la humanidad.
+                </p>
+
+                <p>
+                    Durante aquel evento perdió uno de su brazo derecho y quedó gravemente marcado por la corrupción.
+                    Ahora, el legendario hechicero permanece encerrado en su antigua mansión, esperando el día de su
+                    final… a menos que todavía exista una forma de salvar el mundo.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="personaje-destacado">
+
+            <div class="parallax-container">
+                <div class="parallax-bg"></div>
+
+                <img src="img/Gepeto.jpg" alt="Gerhman Bondblood" class="personaje-img">
+            </div>
+
+            <div class="personaje-info">
+
+                <h2>Gerhman Bondblood</h2>
+
+                <p>
+                    Gerhman Bondblood fue alguna vez un legendario caballero proveniente de unas tierras lejanas
+                    donde la oscuridad y la guerra consumían todo a su paso. Desde joven sobrevivió enfrentándose
+                    a monstruos y criaturas que pocos hombres se atrevían siquiera a mirar.
+                </p>
+
+                <p>
+                    Cansado de vivir rodeado de muerte, abandonó su hogar y viajó hasta Florentia, donde rápidamente
+                    ganó reconocimiento como un poderoso cazador de bestias y seres míticos. Gracias a su valentía
+                    y fuerza, terminó formando parte de los legendarios Héroes de la Armonía.
+                </p>
+
+                <p>
+                    A pesar de su fama como guerrero, todo cambió cuando conoció a Elaine de Sunshine, una mujer
+                    que le enseñó a apreciar la tranquilidad y la paz. Después de casarse con ella, Gerhman decidió
+                    abandonar la espada para convertirse en herrero y vivir una vida lejos de la guerra.
+                </p>
+
+                <p>
+                    Poco tiempo después nació su hijo, convirtiéndose en el mayor orgullo de su vida. Sin embargo,
+                    la gran enfermedad que azotó al reino terminó arrebatándole la vida a Elaine, la misma tragedia
+                    que destruyó la felicidad de Raiden.
+                </p>
+
+                <p>
+                    Aun con el dolor, Gerhman siguió adelante por su hijo, criándolo con todo el amor que aún le
+                    quedaba. Pero años después, cuando el caos comenzó a extenderse por el mundo, caballeros de la
+                    Iglesia Ortodoxa secuestraron al niño para realizar experimentos prohibidos.
+                </p>
+
+                <p>
+                    Tras años de búsqueda, Gerhman descubrió la horrible verdad: su hijo había sido fusionado con
+                    una monstruosa criatura de madera y convertido en un arma viviente. Desde entonces vaga por el
+                    mundo cazando monstruos y forjando armas mientras intenta encontrar el paradero de su hijo.
+                </p>
+
+                <p>
+                    Su destino finalmente cambia al encontrarse con Rye Wildgoose, quien decide ayudarlo a cumplir
+                    el deseo que lo ha mantenido vivo durante tantos años: encontrar a su hijo y liberarlo del
+                    monstruo en el que fue convertido.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="personaje-destacado">
+
+            <div class="parallax-container">
+                <div class="parallax-bg"></div>
+
+                <img src="img/Eleanor.jpg" alt="Gerhman Bondblood" class="personaje-img">
+            </div>
+
+            <div class="personaje-info">
+
+                <h2>Ophelia Bloodrose</h2>
+
+                <p>
+                    Ophelia Bloodrose es una vampira de sangre real que ha vivido más de 300 años,
+                    marcada por la tragedia, la pérdida y la soledad. Nació en las tierras de Bloodrose,
+                    un reino oculto donde los vampiros convivían alejados de la humanidad.
+                    Desde que tuvo conciencia sirvió con absoluta lealtad a Lenore Drakenth,
+                    una poderosa vampira noble a quien veía no solo como su señora,
+                    sino también como su familia y el mayor amor de su vida.
+                </p>
+
+                <p>
+                    Durante años vivieron rodeadas de tranquilidad, conocimiento y compañerismo,
+                    hasta que la Santa Inquisición descendió sobre Bloodrose acompañada de caballeros sagrados.
+                    Lo que alguna vez fue un reino lleno de vida quedó reducido a cenizas,
+                    muerte y desesperación. En medio de la masacre, Ophelia fue herida de muerte,
+                    pero antes de perderla, Lenore sacrificó parte de su propia sangre para convertirla
+                    en una vampira de sangre real y ocultarla lejos del desastre.
+                </p>
+
+                <p>
+                    Cuando Ophelia despertó, regresó demasiado tarde.
+                    Encontró a Lenore crucificada bajo la luz del sol,
+                    atravesada por una estaca frente al reino que las condenó.
+                    Aquel momento destruyó todo lo que quedaba dentro de ella.
+                    Consumida por el dolor y la rabia, Ophelia erradicó
+                    a los responsables de aquella tragedia y desapareció del mundo durante años,
+                    convirtiéndose en una figura temida y marginada por la humanidad.
+                </p>
+
+                <p>
+                    A pesar de la oscuridad que cargaba en su interior,
+                    nunca dejó de ayudar a quienes sufrían.
+                    Vagó por incontables pueblos protegiendo inocentes,
+                    cazando monstruos y salvando personas que jamás supieron quién era realmente.
+                    Con el paso del tiempo, las historias sobre una vampira vestida de negro
+                    comenzaron a extenderse por todo Florentia.
+                </p>
+
+                <p>
+                    Muchos años después conoció a Perceval Pendragon,
+                    un joven caballero prodigio perteneciente a los legendarios 15 Héroes de la Armonía.
+                    A pesar de tener apenas 17 años, Perceval poseía una voluntad inquebrantable
+                    y una bondad capaz de desafiar incluso el odio que Ophelia sentía hacia el mundo.
+                    Durante siete años lucharon juntos, ayudando personas y enfrentándose
+                    a criaturas nacidas de la corrupción y la guerra.
+                </p>
+
+                <p>
+                    Con el tiempo, Perceval devolvió esperanza al corazón de Ophelia,
+                    logrando que ella también se uniera a los héroes para proteger a los inocentes.
+                    Por primera vez en siglos, Ophelia creyó haber encontrado paz y un lugar al cual pertenecer.
+                </p>
+
+                <p>
+                    Sin embargo, con la llegada de la corrupción y la caída del reino,
+                    Ophelia comprenderá una vez más que el destino siempre intenta
+                    arrebatarle todo aquello que ama.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="personaje-destacado">
+
+            <div class="parallax-container">
+                <div class="parallax-bg"></div>
+
+                <img src="img/Lyra Dawnwright.jpg" alt="Gerhman Bondblood" class="personaje-img">
+            </div>
+
+            <div class="personaje-info">
+
+                <h2>Lyra Dawnwright</h2>
+
+                <p>
+                    Lyra Dawnwright nació dentro de una familia noble reconocida por su elegancia,
+                    educación y prestigio dentro de Florentia. Desde pequeña creció rodeada de amor,
+                    música y sueños, desarrollando una gran pasión por las artes y especialmente
+                    por la música. Durante su juventud conoció a Rye, un joven con quien compartía
+                    una conexión inseparable. Ambos prometieron convertirse algún día en grandes músicos,
+                    pasando incontables días juntos practicando, soñando y hablando sobre el futuro.
+                </p>
+
+                <p>
+                    Sin embargo, con el paso del tiempo Rye comenzó a distanciarse lentamente,
+                    hasta que finalmente fue sentenciado a convertirse en un herrante,
+                    desapareciendo casi por completo de la vida de Lyra.
+                    Poco después de este acontecimiento, el padre de Lyra fue enviado
+                    a una misión que originalmente debía cumplir el padre de Rye.
+                    Aquella expedición terminó en tragedia y su padre murió en combate.
+                </p>
+
+                <p>
+                    La desgracia continuó persiguiendo a la familia Dawnwright.
+                    Tiempo después, el hermano mayor de Lyra también perdió la vida,
+                    dejando únicamente a Lyra y a su madre intentando sostener
+                    el honor de su apellido. Aprovechando su debilidad,
+                    otras familias nobles comenzaron a desprestigiar y destruir lentamente
+                    el nombre de los Dawnwright, arrebatándoles gran parte de sus riquezas,
+                    influencia y respeto dentro del reino.
+                </p>
+
+                <p>
+                    Obligada a abandonar sus sueños y la vida que alguna vez deseó,
+                    Lyra decidió convertirse en caballera. Gracias a su disciplina,
+                    inteligencia y enorme talento, logró convertirse rápidamente
+                    en una guerrera reconocida dentro de Florentia,
+                    obteniendo renombre y estatus en muy poco tiempo.
+                </p>
+
+                <p>
+                    Todo cambió cuando comenzaron a surgir rumores sobre
+                    la posible caída del reino y la expansión de la corrupción.
+                    Florentia decidió enviar expediciones conformadas por herrantes
+                    y caballeros para investigar el origen del peligro,
+                    y entre los nombres enviados apareció Rye.
+                </p>
+
+                <p>
+                    Incapaz de ignorarlo, Lyra decidió unirse a la expedición
+                    con la esperanza de reencontrarse con su viejo amigo.
+                    Sin embargo, jamás imaginó el estado en el que encontraría a Rye,
+                    ni el terrible caos en el que el reino entero había caído.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="comentarios-section">
+        <div class="comentarios-contenedor">
+
+            <div class="comentarios-formulario">
+                <h2>Comentarios para mejorar</h2>
+
+                <form action="https://formsubmit.co/frominsidepg@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo comentario para FromInside">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="correo" placeholder="Tu correo" required>
+
+                    <textarea name="comentario" placeholder="Escribe algo..." required></textarea>
+
+                    <button type="submit">Enviar comentario</button>
+                </form>
+            </div>
+
+            <div class="comentarios-imagen">
+                <img src="img/gracias.jpeg" alt="Gracias por comentar">
+            </div>
+
         </div>
     </section>
 
-    <footer>
-        <p>© 2026 FromInside - The Hollow Eucharist</p>
+    <footer id="redes">
+        <div class="footer-contenido">
+
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo FromInside">
+                <p>© 2026 FromInside - The Hollow Eucharist</p>
+            </div>
+
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+
+                <div class="iconos-redes">
+                    <a href="https://www.facebook.com/profile.php?id=61584412778342" target="_blank">
+                        <img src="img/Facebook_Logo.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://www.instagram.com/frominsidepg/" target="_blank">
+                        <img src="img/Instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </footer>
 
+    <div id="cookie-banner" class="cookie-banner">
+
+        <p>
+            Esta página utiliza cookies para mejorar la experiencia del usuario y el funcionamiento del sitio.
+        </p>
+
+        <button onclick="aceptarCookies()">
+            Entendido
+        </button>
+
+    </div>
+
+    <script>
+
+        function aceptarCookies() {
+
+            localStorage.setItem("cookiesAceptadas", "true");
+
+            document.getElementById("cookie-banner").style.display = "none";
+
+        }
+
+        window.onload = function () {
+
+            if (localStorage.getItem("cookiesAceptadas") === "true") {
+
+                document.getElementById("cookie-banner").style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
     <script src="scriptMundos.js"></script>
+
 </body>
+
 </html>
