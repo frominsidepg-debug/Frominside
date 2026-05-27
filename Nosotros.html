@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | FromInside</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/EstilosNosotros.css">
+
+
+    <link rel="stylesheet" href="css/EstilosNosotros.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="logo">
+                <a href="Mundo.html">
+                    <img src="img/logo.png" alt="Logo FromInside">
+                </a>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Mundo</a></li>
+                    <li><a class="activo" href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="Cuenta.html">Cuenta</a></li>
+
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero-nosotros">
+            <div class="hero-contenido">
+                <h1>FromInside Studio</h1>
+                <p>
+                    Un espacio creativo donde las emociones, el dibujo tradicional y la fantasía oscura se unen para
+                    crear mundos con alma, historias humanas y experiencias que nacen desde lo más profundo de nosotros.
+                </p>
+            </div>
+        </section>
+
+
+        <section class="noticias-section">
+            <h2>Noticias y avances</h2>
+
+            <div class="noticias-grid">
+
+                <article class="noticia-card">
+                    <img src="img/stikers.png" alt="Concept art de la casa del herrero">
+
+                    <div class="noticia-info">
+                        <h3>Stickers especiales</h3>
+
+                        <p>
+                            ¡Prepárense! Hemos creado una serie de stickers especiales inspirados en
+                            el mundo de <strong>The Hollow Eucharist</strong>, los cuales estaremos
+                            regalando durante un evento este viernes.
+                        </p>
+
+                        <div class="noticia-extra">
+                            <p>
+                                Estos diseños fueron realizados para representar parte de la identidad
+                                artística y oscura de FromInside. Muy pronto compartiremos más información
+                                sobre el evento y cómo podrán conseguirlos.
+                            </p>
+                        </div>
+
+                        <button class="btn-ver-mas" onclick="toggleNoticia(this)">ver más</button>
+                    </div>
+                </article>
+
+                <article class="noticia-card">
+                    <img src="img/gotico.jpeg" alt="Arte conceptual de la ciudad antes de la catástrofe">
+
+                    <div class="noticia-info">
+                        <h3>El castillo Bloodrose</h3>
+
+                        <p>
+                            Comenzamos a trabajar en el diseño del legendario castillo de Ophelia Bloodrose,
+                            una enorme fortaleza gótica conocida por su belleza oscura, su imponente arquitectura
+                            y el miedo que inspiraba en quienes se acercaban a sus tierras.
+                        </p>
+
+                        <div class="noticia-extra">
+                            <p>
+                                El castillo Bloodrose fue alguna vez el hogar de una de las familias vampíricas
+                                más poderosas del reino. Sus enormes torres, salones iluminados por la luna y
+                                catedrales cubiertas de rojo reflejan el enorme poder e historia que alguna vez
+                                protegieron aquellas tierras antes de la tragedia.
+                            </p>
+                        </div>
+
+                        <button class="btn-ver-mas" onclick="toggleNoticia(this)">ver más</button>
+                    </div>
+                </article>
+
+                <article class="noticia-card">
+                    <img src="img/mono.png" alt="Concept art del bosque de Kent">
+
+                    <div class="noticia-info">
+                        <h3>Bestia del Bosque de Kent</h3>
+
+                        <p>
+                            Concept art de una de las criaturas que habitan el bosque de Kent,
+                            una aberración nacida a partir de experimentos realizados por la Iglesia
+                            y posteriormente consumida por la maldición de la putrefacción.
+                        </p>
+
+                        <div class="noticia-extra">
+                            <p>
+                                Esta criatura alguna vez fue utilizada como parte de los intentos de la Iglesia
+                                por crear seres capaces de resistir la corrupción. Sin embargo, el experimento salió
+                                mal,
+                                deformando completamente su cuerpo y mente hasta convertirlo en una bestia salvaje
+                                que ahora vaga entre las ruinas y bosques enfermos de Florentia.
+                            </p>
+                        </div>
+
+                        <button class="btn-ver-mas" onclick="toggleNoticia(this)">ver más</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+
+        <section class="info-section">
+
+            <div class="info-texto">
+                <h2>Nosotros</h2>
+
+                <p>
+                    FromInside se define como una entidad introspectiva, cálida y honesta. No buscamos ser una empresa
+                    corporativa sin alma, sino un lugar de artistas donde las ideas, los miedos, los sueños y las
+                    emociones puedan transformarse en experiencias interactivas.
+                </p>
+
+                <p>
+                    Nuestro propósito es crear videojuegos que transmitan algo más allá del entretenimiento. Queremos
+                    que cada escenario, personaje y fragmento de historia tenga una intención emocional, mostrando que
+                    incluso en mundos oscuros puede existir una pequeña luz de esperanza.
+                </p>
+            </div>
+
+            <div class="info-imagen">
+                <img src="img/image (1).png" alt="Arte de personaje de FromInside">
+            </div>
+
+        </section>
+
+
+
+        <section class="bloques-section">
+
+            <article class="bloque-info">
+                <h2>Descripción del nombre</h2>
+                <p>
+                    El nombre FromInside nace de la idea de que toda creación verdadera viene desde adentro. Las ideas,
+                    la innovación, el amor, la tristeza, los recuerdos y los miedos forman parte de aquello que un
+                    artista plasma en su obra.
+                </p>
+                <p>
+                    Para nosotros, crear es una forma de expresión personal. Por eso el nombre representa historias
+                    hechas con cariño, honestidad y originalidad.
+                </p>
+            </article>
+
+            <article class="bloque-info">
+                <h2>Descripción de la marca</h2>
+                <p>
+                    La marca busca sentirse cercana, humana y artística. Su personalidad combina la madurez necesaria
+                    para tratar temas como el duelo, la soledad y la decadencia, con la esperanza de quien aún cree en
+                    la conexión humana.
+                </p>
+            </article>
+
+            <article class="bloque-info">
+                <h2>Misión</h2>
+                <p>
+                    Crear experiencias interactivas que trasciendan el entretenimiento, utilizando el dibujo tradicional
+                    y la narrativa profunda para explorar emociones humanas complejas mediante mundos oscuros,
+                    simbólicos y llenos de significado.
+                </p>
+            </article>
+
+            <article class="bloque-info">
+                <h2>Visión</h2>
+                <p>
+                    Convertirnos en un referente dentro del desarrollo independiente, siendo reconocidos por nuestro
+                    trabajo artístico, nuestra narrativa emocional y nuestra capacidad para crear juegos con identidad,
+                    sensibilidad y alma propia.
+                </p>
+            </article>
+
+        </section>
+
+
+
+        <section class="mundo-section">
+            <div class="mundo-contenido">
+                <h2>El Reino de The Hollow Eucharist</h2>
+
+                <p>
+                    Toda la paz y armonía que alguna vez existió en Florentia fue consumida cuando una misteriosa
+                    presencia divina descendió desde los cielos. Lo que al inicio fue visto como un milagro,
+                    terminó convirtiéndose en el origen de la tragedia que destruyó el reino.
+                </p>
+
+                <p>
+                    Con la llegada de aquel dios, una terrible maldición comenzó a extenderse por toda la tierra,
+                    corrompiendo la carne, la mente y el alma de quienes la padecían. Los templos quedaron vacíos,
+                    las ciudades cayeron en ruinas y Florentia lentamente comenzó a acercarse a su inevitable final.
+                </p>
+
+                <p>
+                    Ahora, entre la decadencia y la desesperación, los pocos sobrevivientes que aún quedan luchan
+                    por encontrar esperanza dentro de un mundo condenado por la putrefacción y la pérdida de la gracia.
+                </p>
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer id="redes">
+        <div class="footer-contenido">
+
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo FromInside">
+                <p>© 2026 FromInside - The Hollow Eucharist</p>
+            </div>
+
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+
+                <div class="iconos-redes">
+                    <a href="https://www.facebook.com/profile.php?id=61584412778342" target="_blank">
+                        <img src="img/Facebook_Logo.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://www.instagram.com/frominsidepg/" target="_blank">
+                        <img src="img/Instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+
+        function toggleNoticia(button) {
+
+            const card = button.closest(".noticia-card");
+
+            card.classList.toggle("abierta");
+
+            if (card.classList.contains("abierta")) {
+                button.textContent = "ver menos";
+            } else {
+                button.textContent = "ver más";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta | FromInside</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/EstilosCuenta.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo FromInside">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Mundo</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a class="activo" href="Cuenta.html">Cuenta</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main class="cuenta-main">
+
+        <section class="cuenta-section">
+
+            <div class="cuenta-info">
+                <h1>Únete a FromInside</h1>
+
+                <p>
+                    Crea tu cuenta para formar parte de la comunidad de The Hollow Eucharist,
+                    recibir novedades del proyecto y compartir comentarios sobre el desarrollo.
+                </p>
+
+                <p>
+                    Tu apoyo y tus ideas ayudan a que este mundo siga creciendo.
+                </p>
+            </div>
+
+            <div class="cuenta-contenedor">
+
+                <div class="formulario-cuenta">
+                    <h2>Crear cuenta</h2>
+
+                    <form id="registroForm">
+                        <input type="text" id="nombreRegistro" placeholder="Tu nombre" required>
+                        <input type="email" id="correoRegistro" placeholder="Correo electrónico" required>
+                        <input type="password" id="passwordRegistro" placeholder="Contraseña" required>
+
+                        <button type="submit">Registrarme</button>
+                    </form>
+                </div>
+
+                <div class="formulario-cuenta">
+                    <h2>Iniciar sesión</h2>
+
+                    <form id="loginForm">
+                        <input type="email" id="correoLogin" placeholder="Correo electrónico" required>
+                        <input type="password" id="passwordLogin" placeholder="Contraseña" required>
+
+                        <button type="submit">Entrar</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <p id="mensajeCuenta"></p>
+
+        </section>
+
+    </main>
+
+    <footer id="redes">
+        <div class="footer-contenido">
+
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Logo FromInside">
+                <p>© 2026 FromInside - The Hollow Eucharist</p>
+            </div>
+
+            <div class="footer-redes">
+                <h3>Síguenos</h3>
+
+                <div class="iconos-redes">
+                    <a href="https://www.facebook.com/profile.php?id=61584412778342" target="_blank">
+                        <img src="img/Facebook_Logo.png" alt="Facebook">
+                    </a>
+
+                    <a href="https://www.instagram.com/frominsidepg/" target="_blank">
+                        <img src="img/Instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="cuenta.js"></script>
+
+</body>
+
+</html>
